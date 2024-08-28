@@ -10,7 +10,10 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    let bar_height = width / 12;
    let bar_pos_x = width / 2;
  
-
+   let drumMap = map(drum,0,100,0,50); //Could get help
+   console.log(counter);
+   ellipse(counter/2,500-drumMap,100);
+ 
    // vocal bar is red
    fill(200, 0, 0);
    rect(bar_pos_x, height / 2 + 1 * bar_spacing, 4 * vocal, bar_height);
