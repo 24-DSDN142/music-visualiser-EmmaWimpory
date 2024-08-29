@@ -3,6 +3,10 @@ let lastWords = "...";
 let wordBrightness = 255;
 let yOffset = 0;
 
+function preload(){
+  img1 = loadImage(images/drawing.png)
+}
+
 function draw_one_frame(words, vocal, drum, bass, other, counter) {
 background(0);
 rectMode(CENTER);
