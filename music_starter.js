@@ -11,9 +11,7 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
    let bar_pos_x = width / 2;
  
 
-   let drumMap = map(drum,0,100,0,50); //Could get help
-   console.log(counter);
-   ellipse(counter/2,800-drumMap,100);
+
 
 
 {
@@ -22,6 +20,10 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
   triangle(200,80,50-vocalMap,650,450+vocalMap,650) //50, 450
 }
 
+let drumMap = map(drum,0,100,0,50); //Could get help
+console.log(counter);
+ellipse(counter/2,800-drumMap,100);
+
 
   let imgElement = document.getElementById('dynamicImage');
   if (!imgElement) {
@@ -29,13 +31,14 @@ function draw_one_frame(words, vocal, drum, bass, other, counter) {
     imgElement.id = 'dynamicImage'; 
     imgElement.src = 'images/drawing.png';
     imgElement.alt = 'drawing';
-    imgElement.width = 400;
-    imgElement.height = 500;
+    imgElement.width = 500;
+    imgElement.height = 600;
     imgElement.style.position = 'absolute'; 
     imgElement.style.left = '10px';
-    imgElement.style.top = '450px'; 
+    imgElement.style.top = '380px'; 
     document.body.appendChild(imgElement);
   }
+
 
   //  // vocal bar is red
   //  fill(200, 0, 0);
